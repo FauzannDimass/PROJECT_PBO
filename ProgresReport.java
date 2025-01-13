@@ -1,4 +1,4 @@
-interface ProgresReport {
+public interface ProgresReport {
     void simpanLaporan(String laporan);
     void tampilkanLaporan();
 }
