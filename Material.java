@@ -1,4 +1,4 @@
-class Material {
+public class Material {
     private String jenisMaterial;
     private String namaMaterial;
     private int kuantitas;
@@ -9,6 +9,10 @@ class Material {
         this.namaMaterial = namaMaterial;
         this.kuantitas = kuantitas;
         this.hargaMaterial = hargaMaterial;
+    }
+
+    public Material(String jenisMaterial, String namaMaterial, double hargaMaterial) {
+        this(jenisMaterial, namaMaterial, 1, hargaMaterial);
     }
 
     public double getTotalHarga() {
