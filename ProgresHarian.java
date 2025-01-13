@@ -1,19 +1,19 @@
-class ProgresHarian implements LaporanProgres {
-    public String tanggal;
-    public String laporan;
+public class ProgresHarian implements ProgresReport {
+    private String tanggal;
+    private String laporan;
 
-    public ProgresHarian() {
-    }
-
-    @Override
-    public void simpanLaporan(String tanggal, String laporan) {
+    public ProgresHarian(String tanggal, String laporan) {
         this.tanggal = tanggal;
         this.laporan = laporan;
     }
 
     @Override
+    public void simpanLaporan(String laporan) {
+        this.laporan = laporan;
+    }
+
+    @Override
     public void tampilkanLaporan() {
-        System.out.println("Tanggal: " + this.tanggal);
-        System.out.println("Laporan: " + this.laporan);
+        System.out.println("Tanggal: " + tanggal + ", Laporan: " + laporan);
     }
 }
