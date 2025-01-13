@@ -1,9 +1,11 @@
+import java.util.ArrayList;
+
 public class Anggaran {
     private int idAnggaran;
     private double totalAnggaran;
     private double anggaranTerealisasi;
     private double anggaranTersisa;
-    private List<Material> materials;
+    private ArrayList<Material> materials;
     private Projek proyek;
 
     public Anggaran(int idAnggaran, double totalAnggaran) {
