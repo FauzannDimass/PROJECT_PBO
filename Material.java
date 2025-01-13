@@ -1,35 +1,28 @@
 class Material {
+    private String jenisMaterial;
     private String namaMaterial;
-    private int stok;
-    private int harga;
+    private int kuantitas;
+    private double hargaMaterial;
 
-    public Material(String namaMaterial, int stok, int harga) {
+    public Material(String jenisMaterial, String namaMaterial, int kuantitas, double hargaMaterial) {
+        this.jenisMaterial = jenisMaterial;
         this.namaMaterial = namaMaterial;
-        this.stok = Math.max(stok, 0);
-        this.harga = Math.max(harga, 0);
+        this.kuantitas = kuantitas;
+        this.hargaMaterial = hargaMaterial;
     }
 
-    public int getStok() {
-        return stok;
+    public double getTotalHarga() {
+        return kuantitas * hargaMaterial;
     }
 
     public String getNamaMaterial() {
         return namaMaterial;
     }
 
-//    public void setStok(int stok) {
-//        this.stok = Math.max(stok, 0);
-//    }
-
-    public int getHarga() {
-        return harga;
-    }
-
-//    public void setHarga(int harga) {
-//        this.harga = Math.max(harga, 0);
-//    }
-
-    public int hitungTotalHarga() {
-        return harga * stok;
+    @Override
+    public String toString() {
+        return "Material [Jenis: " + jenisMaterial + ", Nama: " + namaMaterial +
+                ", Kuantitas: " + kuantitas + ", Harga: " + hargaMaterial +
+                ", Total Harga: " + getTotalHarga() + "]";
     }
 }
