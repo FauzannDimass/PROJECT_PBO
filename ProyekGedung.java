@@ -1,4 +1,4 @@
-class ProyekGedung extends Projek {
+public class ProyekGedung extends Projek {
     private int jumlahLantai;
 
     public ProyekGedung(int projekId, String nama, String lokasi, String status, int jumlahLantai) {
