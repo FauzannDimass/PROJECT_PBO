@@ -2,7 +2,7 @@ public class ProyekGedung extends Projek {
     private int jumlahLantai;
 
     public ProyekGedung(int projekId, String nama, String lokasi, String status, int jumlahLantai) {
-        super(projekId, nama, lokasi, 0, status);  // Budget for building projects can be added later
+        super(projekId, nama, lokasi, 0, status); 
         this.jumlahLantai = jumlahLantai;
     }
 
